@@ -126,6 +126,15 @@ html {
     text-align: right;
 }
 
+#menu {
+	width: 300px;
+	height: 700px;
+	color: #1f3346;
+	mix-blend-mode: multiply;
+	position: absolute;
+	right: 0;
+}
+
 /* Home background */
 #coverimg {
 	position: relative;
