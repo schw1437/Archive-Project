@@ -6,117 +6,217 @@ html {
 	display: none;
 }
 
-/* Logo */
-.logotype {
-	padding: 20px;
-	margin-left: 20px;
+
+h1 {
+  position: absolute;
+  z-index: 2;
+  font-family: PierBold;
+  color: #EE3524;
+  letter-spacing: 1px;
+  bottom: 0px;
+  padding: 20px;
+  left: 30px;
 }
 
+h2 {
+  font-family: PierRegular;
+  color: #1F3346;
+  letter-spacing: 1px;
+  bottom: 0px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+}
 
 
 /* Horizontal Navigation */ 
-#horizontalLinks {
-	float: right;
-	list-style-type: none;
-	margin-top: -40px;
-	margin-right: 20px;
+#logo {
+  width: 344px;
+  height: 59px;
+  background-image: url(logotypewhite.png);
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
-#horizontalLinks li {
-	display: inline;
-	padding: 20px 20px;
+#logo:hover {
+  background-image: url(logotype.png);
+  opacity: .6;
+}
+
+
+#horizontalLinks {
+  height: 70px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1F3346;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 #horizontalLinks li a {
-    text-decoration: none;
-    font-family: PierRegular;
-    color: #ADBACB;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  float: right;
+  font-family: PierRegular;
+  color: #ADBACB;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding-top: 28px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
-#loopsLink:hover {
+#loopsLink {
+  margin-right: 40px;
+}
+
+#loopsLink:hover, #loopsLink:active {
+  height: 70px;
+  background-color: white;
 	color: #1F3346;
+  opacity: .7;
 }
 
-#bendsLink:hover {
+#bendsLink:hover, #bendsLink:active {
+  height: 70px;
+  background-color: white;
 	color: #EE3524;
+  opacity: .7;
 }
 
-#hitchesLink:hover {
+#hitchesLink:hover, #hitchesLink:active {
+  height: 70px;
+  background-color: white;
 	color: #5CE1FF;
+  opacity: .7;
 }
 
-#stoppersLink:hover {
+#stoppersLink:hover, #stoppersLink:active {
+  height: 70px;
+  background-color: white;
 	color: #5DECD3;
+  opacity: .7;
+}
+
+.dropdownLoops {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdownLoops a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownLoops a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdownLoops {
+    display: inherit;
 }
 
 
 
-/* Hamburger Navigation */
-#hamburgerIcon {
-  width: 36px;
-  height: 20px;
-  display: block;
-  right: 0;
+/* Home background */
+#coverimg {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
-#hamburgerIcon .line {
-  display: block;
-  background: #414042;
-  width: 36px;
-  height: 5px;
+#coverimg img {
+	position: absolute;
+	z-index: -1;
+	top: -80px;
+	left: -8px;
+	mix-blend-mode: multiply;
+	opacity: .5;
+}
+
+
+/* Loop Content */
+.background {
+  opacity: .3;
   position: absolute;
-  margin-top: 35px;
-  left: 1180px;
-  right: 0;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-#hamburgerIcon .line.lineOne {
+  left: 0;
+  z-index: -2;
   top: 0;
-}
-#hamburgerIcon .line.lineTwo {
-  top: 10px;
-}
-#hamburgerIcon .line.lineThree {
-  top: 20px;
-}
-#hamburgerIcon:hover .lineOne, #hamburgerIcon:focus .lineOne {
-  transform: translateY(-4px);
-  -webkit-transform: translateY(-4px);
-  -moz-transform: translateY(-4px);
-}
-#hamburgerIcon:hover .lineThree, #hamburgerIcon:focus .lineThree {
-  transform: translateY(4px);
-  -webkit-transform: translateY(4px);
-  -moz-transform: translateY(4px);
-}
-#hamburgerIcon.active .lineOne {
-  transform: translateY(10px) translateX(0) rotate(45deg);
-  -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
-  -moz-transform: translateY(10px) translateX(0) rotate(45deg);
-}
-#hamburgerIcon.active .lineTwo {
-  opacity: 0;
-}
-#hamburgerIcon.active .lineThree {
-  transform: translateY(-10px) translateX(0) rotate(-45deg);
-  -webkit-transform: translateY(-10px) translateX(0) rotate(-45deg);
-  -moz-transform: translateY(-10px) translateX(0) rotate(-45deg);
+  top: -80px;
 }
 
-#hamburgerLinks {
-	float: right;
-	list-style-type: none;
-	margin-right: 20px;
+
+.loopsWrapper {
+  margin: auto;
+  width: 1000px;
+  margin-top: 170px;
 }
 
-#hamburgerLinks li {
-	padding: 20px 20px;
+#one, #two, #three, #four {
+  height: 300px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+  float: left;
+  background-size: 250px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
+#one {
+  background-image: url(butterflyone.png);
+}
+
+#one:hover {
+  background-image: url(butterflytwo.png);
+  opacity: .7;
+}
+
+#two {
+  background-image: url(bowlineone.png);
+}
+
+#two:hover {
+  background-image: url(bowlinetwo.png);
+  opacity: .7;
+}
+
+#three {
+  background-image: url(spliceone.png);
+}
+
+
+#three:hover {
+  background-image: url(splicetwo.png);
+  opacity: .7;
+}
+
+#four {
+  background-image: url(shackleone.png);
+}
+
+<<<<<<< Updated upstream
 #hamburgerLinks li a {
     text-decoration: none;
     font-family: PierRegular;
@@ -140,24 +240,140 @@ html {
 	position: relative;
 	width: 100%;
 	height: 100%;
+=======
+#four:hover {
+  background-image: url(shackletwo.png);
+  opacity: .7;
 }
 
-#coverimg img {
-	position: absolute;
-	z-index: -1;
-	top: -110px;
-	left: -8px;
-	mix-blend-mode: multiply;
-	opacity: .5;
+.bendsWrapper {
+  margin: auto;
+  width: 750px;
+  margin-top: 170px;
 }
 
-/* Page Images */
-#imageWrapper img {
-	float: left;
-	padding: -30px;
+.bendsWrapper #one {
+  background-image: url(alpineone.png);
+>>>>>>> Stashed changes
+}
+
+.bendsWrapper #one:hover {
+  background-image: url(alpinetwo.png);
+  opacity: .7;
+}
+
+.bendsWrapper #two {
+  background-image: url(carrickone.png);
+}
+
+.bendsWrapper #two:hover {
+  background-image: url(carricktwo.png);
+  opacity: .7;
+}
+
+.bendsWrapper #three {
+  background-image: url(zeppelinone.png);
+}
+
+.bendsWrapper #three:hover {
+  background-image: url(zeppelintwo.png);
+  opacity: .7;
+}
+
+.stoppersWrapper {
+  margin: auto;
+  width: 750px;
+  margin-top: 170px;
+}
+
+.stoppersWrapper #one {
+  background-image: url(eightone.png);
+}
+
+.stoppersWrapper #one:hover {
+  background-image: url(eighttwo.png);
+  opacity: .7;
+}
+
+.stoppersWrapper #two {
+  background-image: url(ashleyone.png);
+}
+
+.stoppersWrapper #two:hover {
+  background-image: url(ashleytwo.png);
+  opacity: .7;
+}
+
+.stoppersWrapper #three {
+  background-image: url(estarone.png);
+}
+
+.stoppersWrapper #three:hover {
+  background-image: url(estartwo.png);
+  opacity: .7;
 }
 
 
+/*subpage layout*/
+.numbers {
+  width: 380px;
+  margin: auto;
+}
+
+#stepOne, #stepTwo, #stepThree, #stepFour {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  margin-top: 120px;
+  width: 50px;
+  height: 50px;
+  background-color: #1F3346;
+  margin-left: 30px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+h3 {
+  color: white;
+  font-family: PierBold;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+#stepOne:hover, #stepTwo:hover, #stepThree:hover, #stepFour:hover {
+  background-color: #EE3524;
+  opacity: .7;
+  cursor: pointer;
+}
+
+.howtoImages {
+  position: relative;
+  top: 100px;
+  width: 500px;
+  margin: auto;
+}
+
+.definition {
+  margin: auto;
+  width: 300px;
+  position: relative;
+  top: 30px;
+}
+
+.definition h2 {
+  font-family: PierBold;
+  left: -77px;
+  top: -20px;
+}
+
+.definition p {
+  font-family: PierRegular;
+  font-size: 12px;
+  color: #777a82;
+}
 
 
 /* Fonts */

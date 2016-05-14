@@ -2,8 +2,6 @@ $(document).ready(function() {
 
         $('#wrapper').fadeIn(2000);
 
-        var hamburger = $('#hamburgerIcon');
-       
         
         /* Home Page Hover Effects */
         $('#loopsLink').mouseenter(function() { $('#loopsImg').fadeTo("slow", 1); });
@@ -18,25 +16,27 @@ $(document).ready(function() {
         $('#stoppersLink').mouseenter(function() { $('#stoppersImg').fadeTo("slow", 1); });
         $('#stoppersLink').mouseleave(function() { $('#stoppersImg').fadeTo("slow", .5); });
 
-        
-        /* Hamburger Menu Toggle */
-         
-        function x() {
-            hamburger.toggleClass('active');
-            return false;
-        }
-        hamburger.click(function() {
-            x()
-        });
-        function y() {
-             $('#hamburgerLinks').animate({width: 'toggle'}, 500); 
-        }
-        hamburger.click(function(){
-            y()
-        });
-        y();
 
-        $('#butterflyblue').mouseenter(function() { $(this).setAttribute('src', 'butterflygreen.png'); });
 
+/* Image Change */
+        stepOne.onclick = function pictureChange()
+{
+document.getElementById('howTo').src="one.jpg";
+}
+
+        stepTwo.onclick = function pictureChange()
+{
+document.getElementById('howTo').src="two.jpg";
+}
+
+        stepThree.onclick = function pictureChange()
+{
+document.getElementById('howTo').src="three.jpg";
+}
+
+        stepFour.onclick = function pictureChange()
+{
+document.getElementById('howTo').src="four.jpg";
+}
 
 });
